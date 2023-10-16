@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main() {
@@ -9,4 +10,7 @@ int main() {
     }
 
     char* copy = malloc((strlen(str) + 1) * sizeof(char));
+    strncpy(copy, str, strlen(str) + 1);
+    copy[2] = 'r';
+    printf("== copy: %s\n", copy);
 }
